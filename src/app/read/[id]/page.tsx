@@ -7,7 +7,9 @@ type ParamsType = {
 };
 
 export default async function Read(props: Props) {
-  const res = await fetch(`http://localhost:9999/topics/${props.params.id}`);
+  const res = await fetch(`http://localhost:9999/topics/${props.params.id}`, {
+    cache: 'no-store',
+  });
   const topic = await res.json();
 
   return (

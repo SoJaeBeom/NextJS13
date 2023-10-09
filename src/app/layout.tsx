@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import './globals.css';
-import { useEffect, useReducer, useState } from 'react';
+import Control from './Control';
 
 export const metadata = {
   title: 'Web tutorials',
@@ -37,17 +37,7 @@ export default async function RootLayout({
           })}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href='/create'>Create</Link>
-          </li>
-          <li>
-            <Link href='/update'>Update</Link>
-          </li>
-          <li>
-            <input type='button' value={'delete'} />
-          </li>
-        </ul>
+        <Control />
       </body>
     </html>
   );
